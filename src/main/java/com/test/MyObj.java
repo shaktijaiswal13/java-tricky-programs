@@ -7,6 +7,10 @@ public class MyObj {
 		this.a = a;
 	}
 
+	public int addNumber(int a, int b) {
+		return a + b;
+	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
