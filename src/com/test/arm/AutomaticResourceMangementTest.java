@@ -9,8 +9,10 @@ public class AutomaticResourceMangementTest {
 
 	// New way with JDK 7
 	public static void main(String[] args) throws IOException {
-		try (FileInputStream is = new MyInputStream("/Users/shaktikumar/Downloads/Neha Data/Notes/aarondev.txt");
-			FileOutputStream os = new MyOutputStream("/Users/shaktikumar/Downloads/Neha Data/Notes/aarondev_New.txt")) {
+		try (FileInputStream is = new MyInputStream(
+				"/Users/shaktikumar/Downloads/Neha Data/Notes/aarondev.txt");
+				FileOutputStream os = new MyOutputStream(
+						"/Users/shaktikumar/Downloads/Neha Data/Notes/aarondev_New.txt")) {
 			int data;
 			while ((data = is.read()) != -1) {
 				os.write(data);

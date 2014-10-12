@@ -3,7 +3,7 @@ package com.test.classinitialization;
 /**
  * Java program to demonstrate class loading and initialization in Java.
  */
-public class ClassInitializationTest1 {
+public class ClassInitializationTest2 {
 
 	/**
 	 * Another Java program example to demonstrate class initialization and
@@ -14,35 +14,26 @@ public class ClassInitializationTest1 {
 
 		// accessing static field of Parent through child, should only
 		// initialize Parent
-		 System.err.println(Child1.familyName);
-		Child1.familyName1 = "new name";
-		Child1.show();
+		 //System.err.println(Child1.familyName1);
+		System.err.println(Interface.familyName);// = "new name";
+		//Class.show();
 
 		// System.err.println(new Child1().familyName);
 	}
 }
 
-class Parent1 {
+interface Interface {
 	// compile time constant, accessing this will not trigger class
 	// initialization
-	protected static final String familyName = "Lawson";
+	// protected static final String familyName = "Lawson";
 
-	//protected static String familyName = "Lawson";
-	protected String familyNameNonStatic = "Lawson";
+	static String familyName = "Lawson";
+	String familyNameNonStatic = "Lawson";
 
-	static {
-		System.err.println("static block of Super class is initialized");
-	}
-	{
-		System.err.println("non static blocks in super class is initialized");
-	}
-
-	public static void show() {
-		System.err.println("static method of Super class is called" + familyName);
-	}
+	public void show() ;
 }
 
-class Child1 extends Parent1 {
+class Class implements Interface {
 	protected static String familyName1 = "Lawson";
 
 	static {
@@ -51,7 +42,7 @@ class Child1 extends Parent1 {
 	{
 		System.err.println("non static blocks in sub class is initialized");
 	}
-	public static void show() {
+	public void show() {
 		System.err.println("static method of sub class is called");
 	}
 }

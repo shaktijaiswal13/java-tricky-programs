@@ -29,6 +29,7 @@ public class CompareToIssue {
 		HashSet<BigDecimal> set = new HashSet<>();
 		set.add(big1);
 		set.add(big2);
+
 		System.err.println(set.size());// set usses equals() to compare objects,
 										// so big1 and big2 are treated as 2
 										// different objects which is wrong
