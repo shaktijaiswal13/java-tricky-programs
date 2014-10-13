@@ -15,7 +15,17 @@
 
 	</dependencies>
 	<build>
-		<plugins>
+	<plugins>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <configuration>
+                <source>1.7</source>
+                <target>1.7</target>
+            </configuration>
+        </plugin>
+    </plugins>
+		<!-- <plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-enforcer-plugin</artifactId>
@@ -35,11 +45,28 @@
 					</execution>
 				</executions>
 			</plugin>
-		</plugins>
+		</plugins> -->
 	</build>
-	<!-- <build> <sourceDirectory>src</sourceDirectory> <testSourceDirectory>test</testSourceDirectory> 
-		<resources> <resource> <directory>src</directory> <excludes> <exclude>**/*.java</exclude> 
-		</excludes> </resource> </resources> <plugins> <plugin> <artifactId>maven-compiler-plugin</artifactId> 
-		<version>3.1</version> <configuration> <source/> <target/> </configuration> 
-		</plugin> </plugins> </build> -->
+	<!-- <build>
+		<sourceDirectory>src</sourceDirectory>
+		<testSourceDirectory>test</testSourceDirectory>
+		<resources>
+			<resource>
+				<directory>src</directory>
+				<excludes>
+					<exclude>**/*.java</exclude>
+				</excludes>
+			</resource>
+		</resources>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.1</version>
+				<configuration>
+					<source />
+					<target />
+				</configuration>
+			</plugin>
+		</plugins>
+	</build> -->
 </project>
