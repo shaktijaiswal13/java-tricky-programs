@@ -13,6 +13,7 @@ public class OverloadingOverridingTest {
 		// Example of method overriding in Java
 		Loan personalLoan = new PersonalLoan();
 		System.err.println(personalLoan.toString());
+		((PersonalLoan) personalLoan).demo();
 	}
 
 }
@@ -48,6 +49,10 @@ class PersonalLoan extends Loan {
 	@Override
 	public String toString() {
 		return "This is Personal Loan by Citibank";
+	}
+
+	public void demo() {
+		System.err.println("demo");
 	}
 }
 

@@ -20,11 +20,19 @@ public class Box<T> {
 		integerBox.add(new Integer(10));
 		stringBox.add(new String("Hello World"));
 		floatBox.add(new Float(11.9457));
+		try {
+			System.out.printf("Integer Value :%d\n\n", integerBox.get());
+			System.out.printf("String Value :%s\n", stringBox.get());
+			System.out.printf("Float Value :%.5f\n", floatBox.get());
 
-		System.out.printf("Integer Value :%d\n\n", integerBox.get());
-		System.out.printf("String Value :%s\n", stringBox.get());
-		System.out.printf("Float Value :%.5f\n", floatBox.get());
+		} finally {
+		}
+	}
 
+	@Override
+	protected void finalize() throws Throwable {
+		// TODO Auto-generated method stub
+		super.finalize();
 	}
 }
 

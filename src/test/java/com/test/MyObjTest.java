@@ -6,6 +6,11 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
+/**
+ * 
+ * @author shaktikumar
+ * 
+ */
 public class MyObjTest {
 
 	private MyObj myObj;

@@ -1,10 +1,9 @@
 package com.test.serialize;
 
-
 public class Employee extends MyObj implements java.io.Serializable {
-	
+
 	public Employee(String a) {
-		
+
 		super(a);
 	}
 
@@ -12,7 +11,7 @@ public class Employee extends MyObj implements java.io.Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	//public transient String a;
+	// public transient String a;
 	public String name;
 	public String address;
 	public transient int SSN;

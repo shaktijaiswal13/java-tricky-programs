@@ -28,7 +28,8 @@ public class LRUCache<K, V> {
 	 * @return
 	 */
 	public V get(final K key) {
-		return map.get(key);
+		return map.get(key);// should be updated in the queue because of recent
+							// use
 	}
 
 	/**
@@ -48,7 +49,8 @@ public class LRUCache<K, V> {
 			queue.remove(key);
 		}
 		while (queue.size() >= capacity) {
-			K expiredKey = queue.poll();
+			K expiredKey = queue.poll();// removing most recently used data is a
+										// bug
 			if (expiredKey != null) {
 				map.remove(expiredKey);
 			}
