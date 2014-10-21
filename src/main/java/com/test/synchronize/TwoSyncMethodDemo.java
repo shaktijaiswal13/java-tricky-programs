@@ -11,6 +11,12 @@ public class TwoSyncMethodDemo {
 		// sharedObj);
 		// firstThreadToTestSync.start();
 		// secondThreadToTestSync.start();
+		test1();
+		// firstThreadToTestSync.start(); java.lang.IllegalThreadStateException
+
+	}
+
+	private static void test1() {
 		Class<FirstThreadToTestSync> a = FirstThreadToTestSync.class;
 		System.out.println(a);
 
@@ -21,8 +27,6 @@ public class TwoSyncMethodDemo {
 				sharedObj);
 		firstThreadToTestSync.start();
 		secondThreadToTestSync.start();
-		// firstThreadToTestSync.start(); java.lang.IllegalThreadStateException
-
 	}
 
 }
