@@ -4,16 +4,9 @@
 	<groupId>com.test</groupId>
 	<artifactId>java-tricky-programs</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
 	<name>java-tricky-programs</name>
-
-	<dependencies>
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.11</version>
-		</dependency>
-
-	</dependencies>
+	
 	<build>
 	<plugins>
         <plugin>
@@ -69,4 +62,8 @@
 			</plugin>
 		</plugins>
 	</build> -->
+	<modules>
+		<module>restful-services</module>
+		<module>core-java-examples</module>
+  </modules>
 </project>
