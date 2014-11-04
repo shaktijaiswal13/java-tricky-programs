@@ -15,4 +15,4 @@ hs_err_pid*
 *.project
 *.DS_Store
 */target
-*/.settings
+*.settings
