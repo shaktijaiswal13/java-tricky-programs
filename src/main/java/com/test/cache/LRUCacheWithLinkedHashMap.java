@@ -46,7 +46,7 @@ public class LRUCacheWithLinkedHashMap<K, V> {
 			protected boolean removeEldestEntry(final Map.Entry<K, V> eldest) {
 				return size() > LRUCacheWithLinkedHashMap.this.cacheSize;
 			}
-		};
+		}; 
 	}
 
 	/**
