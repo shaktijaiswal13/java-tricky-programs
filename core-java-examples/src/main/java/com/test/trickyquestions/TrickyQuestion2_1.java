@@ -10,19 +10,18 @@ public class TrickyQuestion2_1 {
 	 * @author neha bansal jaiswal
 	 */
 	    public static void main(String args[]) {
-	      
 	        Screen scrn = new ColorScreen();
 	      
 	        //if we can  override static , this should call method from Child class
-	        //scrn.show(); //IDE will show warning, static method should be called from classname
+	        scrn.show(); //IDE will show warning, static method should be called from classname
 	        scrn.stop();//dynamic binding depending on object
 	        
 	        ColorScreen clrScrn = new ColorScreen();
-	        //clrScrn.show();
+	        clrScrn.show();
 	        clrScrn.stop();
 	        
 	        Screen screen = new Screen();
-	        //screen.show();
+	        screen.show();
 	        screen.stop();
 	    }  
 	  
@@ -56,3 +55,5 @@ public class TrickyQuestion2_1 {
 	    	System.err.println("Overridden Non static method from child class");
 	    }
 	}
+	
+	

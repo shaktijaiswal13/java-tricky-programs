@@ -1,0 +1,24 @@
+1) Input:
+10
+aacbdbaaeaa
+daaeddceddaccbebceccdacc
+baeeddbaeebbaeebcdedade
+ceebeedcdcadbbcaeeddabcecaeabdceebcdcaabadebbedaddaabdedaadcdadeeadbdae
+bdbabdaceadeaceacdbdbaeeaacdaeddccdaadcbddaaacdeabeeddaeeecbdceaeeaceddebbcd
+c
+cbbcbabaeedeadabbcaedacecceeeecdddbebeccbabbbcdcbadecaabc
+ddcebdcaebcdeaadbedacddcbaeccdacbcbccaedeecdeebcdeeadcebcbabe
+aaeecedbdeaeaeaeccdeccbdbcdedbaabbeaaebbebabccbeebbbeceabaabdcbedaeaedbabbceeaaabbccadddaae
+aeccecceeeacdeddcecddebbebcebcddccbbaacbbcd
+
+Output:
+18
+31
+33
+84
+91
+1
+72
+75
+120
+46

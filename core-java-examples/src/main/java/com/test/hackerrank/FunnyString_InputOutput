@@ -1,0 +1,17 @@
+1) Input:
+2
+acxz
+bcxz
+
+Output:
+Funny
+Not Funny
+
+2) Input:
+2
+ivvkxq
+ivvkx
+
+Output:
+Not Funny
+Not Funny

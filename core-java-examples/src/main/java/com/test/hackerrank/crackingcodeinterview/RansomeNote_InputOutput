@@ -1,0 +1,31 @@
+1) Input:
+15 17
+o l x imjaw bee khmla v o v o imjaw l khmla imjaw x
+imjaw l khmla x imjaw o l l o khmla v bee o o imjaw imjaw o
+
+Output:
+No
+
+2) Input:
+6 4
+give me one grand today night
+give one grand today
+
+Output: 
+Yes
+
+3) Input:
+6 5
+give me one grand today night
+give one grand today one
+
+Output: 
+No
+
+4) Input:
+15 15
+o l x imjaw bee khmla v o v o imjaw l khmla imjaw x
+imjaw l khmla x imjaw o l l o khmla v bee o o a
+
+Output:
+No

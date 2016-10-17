@@ -7,7 +7,11 @@ public class Test {
 	public static void main(String[] args) {
 		Set<MyObj> s = new HashSet<>();
 		MyObj myObj1 = new MyObj("shakti");
+		System.out.println(myObj1);
+		
 		MyObj myObj2 = new MyObj("shakti");
+		System.out.println(myObj2);
+		
 		s.add(myObj1);
 		s.add(myObj2);
 

@@ -5,40 +5,62 @@ import java.util.logging.Logger;
 
 public class ClassLoaderTest {
 
-	static {
-		System.out.println("static block");
-	}
-
-	{
-		System.out.println("non-static block");
-	}
-
 	public static void main(String args[]) {
 		try {
 			// printing ClassLoader of this class
-			System.out.println("ClassLoaderTest.getClass().getClassLoader() : "
+			System.err.println("ClassLoaderTest.getClass().getClassLoader() : "
 					+ ClassLoaderTest.class.getClassLoader());
 
 			// printing parent ClassLoader of this class's ClassLoader
-			System.out
+			System.err
 					.println("ClassLoaderTest.class.getClassLoader().getParent() : "
 							+ ClassLoaderTest.class.getClassLoader()
 									.getParent());
 
-			System.out.println(ClassLoaderTest.class.hashCode());
+			System.err.println(ClassLoaderTest.class.hashCode());
 
 			// trying to explicitly load this class again using Extension class
 			// loader
 			Class c1 = Class.forName("com.test.classloaders.ClassLoaderTest",
 					true, ClassLoaderTest.class.getClassLoader());
 
-			System.out.println(c1.hashCode());
+			System.err.println(c1.hashCode());
+			
+			//====================================================================//
+			
+			// printing ClassLoader of ClassLoader class
+			System.err.println("ClassLoader.getClass().getClassLoader() : "
+					+ ClassLoader.class.getClassLoader());
+			
+			// printing parent ClassLoader of ClassLoader class's ClassLoader
+			System.err
+			.println("ClassLoader.class.getClassLoader().getParent() : "
+					+ ClassLoader.class.getClassLoader()
+					.getParent());
+			System.err.println(ClassLoader.class.hashCode());
+
+			// trying to explicitly load ClassLoader class again using Extension class
+			// loader, will throw exception ClassNotFoundException
+			Class c2 = Class.forName("com.test.classloaders.ClassLoader",
+					true, ClassLoader.class.getClassLoader().getParent());
+			System.err.println(c2.hashCode());
+			
 		} catch (ClassNotFoundException ex) {
 			Logger.getLogger(ClassLoaderTest.class.getName()).log(Level.SEVERE,
 					null, ex);
 		}
 	}
 
+}
+
+class ClassLoader {
+	static {
+		System.err.println("static block");
+	}
+
+	{
+		System.err.println("non-static block");
+	}
 }
 
 // Read more:

@@ -1,0 +1,44 @@
+1) Input:
+5
+1
+_
+4
+RBRB
+4
+RRRR
+3
+BBB
+4
+BBB_
+
+output:
+YES
+NO
+YES
+YES
+YES
+
+2) Input:
+4
+7
+RBY_YBR
+6
+X_Y__X
+2
+__
+6
+B_RRBR
+
+output:
+YES
+NO
+YES
+YES
+
+3) Input:
+1
+1
+A
+
+output:
+NO

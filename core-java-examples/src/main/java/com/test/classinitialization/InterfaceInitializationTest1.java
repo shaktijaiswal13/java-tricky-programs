@@ -3,7 +3,7 @@ package com.test.classinitialization;
 /**
  * Java program to demonstrate class loading and initialization in Java.
  */
-public class ClassInitializationTest2 {
+public class InterfaceInitializationTest1 {
 
 	/**
 	 * Another Java program example to demonstrate class initialization and
@@ -12,23 +12,30 @@ public class ClassInitializationTest2 {
 
 	public static void main(String args[]) {// /throws InterruptedException {
 
-		// accessing static field of Parent through child, should only
-		// initialize Parent
-		 //System.err.println(Child1.familyName1);
-		System.err.println(Interface.familyName);// = "new name";
-		//Class.show();
-
-		// System.err.println(new Child1().familyName);
+		// accessing static field of Parent through child, should only initialize Parent
+		System.err.println(Class.familyName);
+		
+		System.err.println(Interface.familyName);
+		
+		Class.familyName1 = "new name";
+		System.err.println("initialized");
+		System.err.println(Class.familyName1);
+	}
+	
+	public static String getString(String name, String value) {
+		System.err.println(name + "=" + value);
+		return value;
 	}
 }
 
 interface Interface {
-	// compile time constant, accessing this will not trigger class
-	// initialization
-	// protected static final String familyName = "Lawson";
+	
+	// compile time constant, accessing this will not trigger interface initialization
+	// static final String familyNameFinal = "Lawson Final";
 
-	static String familyName = "Lawson";
-	String familyNameNonStatic = "Lawson";
+	//accessing this will trigger interface initialization
+	static String familyName = InterfaceInitializationTest1.getString("familyName", "Lawson Static");
+	static String familyNameNonStatic = InterfaceInitializationTest1.getString("familyNameNonStatic", "Lawson");
 
 	public void show() ;
 }
